@@ -1,0 +1,28 @@
+import Head from "next/head";
+import Footer from "../components/footer";
+import Navbar from "../components/navbar";
+import PageOpening from '../components/page-opening';
+import PageHeading from '../components/page-heading';
+import PageBody from '../components/page-body';
+
+export default function Rules(){
+    return (
+        <div>
+            <Head>
+                <title>Pugging Rules</title>
+                <meta name="description" content="Pughub rules" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+            </Head>
+            <Navbar />
+            <PageOpening title = "RULES" subTitle="BIG BROTHER IS WATCHING YOU" imageName="jorgen" />
+            <PageBody>
+                <PageHeading 
+                    title="DA RULES" 
+                    content="Violations of any of the following rules may result in applicable restrictions. 
+                    Admins are given discretion in enforcing these rules as they see fit for the benefit of the site and its community.">
+                </PageHeading>
+                <Footer />
+            </PageBody>
+        </div>
+    )
+}
