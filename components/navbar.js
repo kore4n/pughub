@@ -6,22 +6,35 @@ import PughubLogo from "./pughub-logo";
 export default function Navbar(){
     return (
         <div className="bg-navbar-background drop-shadow-2xl pl-8 flex flex-row justify-center content-center">
-            <PughubLogo />
-            <div className="flex justify-center content-center">
+            <div className="flex-1 pr-8 flex">
+                <PughubLogo />
                 <div className="flex-1"></div>
-                <NavbarLogo>
-                    <Link href="/about">
-                        ABOUT
-                    </Link>
-                </NavbarLogo>
+                <div className="flex-1"></div>
+                <div className="flex-1"></div>
+                <div className="flex-1"></div>
+                <div className="flex-1"></div>
+                <div className="flex-1"></div>
+
+            </div>
+            <div className="flex justify-center content-center">
                 <NavbarLogo>
                     <Link href="/">
                         HOME
                     </Link>
                 </NavbarLogo>
                 <NavbarLogo>
+                    <Link href="/about">
+                        ABOUT
+                    </Link>
+                </NavbarLogo>
+                <NavbarLogo>
                     <Link href="/rules">
                         RULES
+                    </Link>
+                </NavbarLogo>
+                <NavbarLogo>
+                    <Link href="/format">
+                        FORMAT
                     </Link>
                 </NavbarLogo>
             </div>

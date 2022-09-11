@@ -9,7 +9,6 @@ export default function Footer(){
         <div className="py-2">
             Copyright © 2022 Pughub
         </div>
-        <FooterBorder />
         <div className="py-2">
             Created with Next.js. Powered by{' '}
             <Image className="invert" src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
