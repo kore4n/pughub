@@ -15,10 +15,11 @@ export default function Footer(){
         </div>
         <FooterBorder />
         <div className="py-2 flex">
-            <div className="flex-1">
-                <PughubLogo />
+            <div className="" >
+                <PughubLogo/>
             </div>
-            <div className="py-4 pl-4 flex-1">
+
+            <div className=" py-0 pl-2 flex-1 m-auto">
             owned and co-founded by Cerby#3741 & Unity#2031
             </div>
         </div>

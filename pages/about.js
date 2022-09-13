@@ -14,9 +14,7 @@ export default function About() {
             <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         </Head>
         <Navbar/>
-        <PageOpening title = "ABOUT" subTitle="THE PAST, PRESENT, AND FUTURE OF THIS WEBSITE" imageName="omnipyro" />
-        <div className=' p-4 bg-main-background'>
-          
+        <PageOpening title = "ABOUT" subTitle="THE PAST, PRESENT, AND FUTURE OF THIS WEBSITE" imageName="omnipyro" /> 
           <PageBody>
               <PageHeading 
                   title="THE BASICS" 
@@ -27,7 +25,7 @@ export default function About() {
               />
               <Footer/>
           </PageBody>
-        </div>
+        
     </div>
   );
 }

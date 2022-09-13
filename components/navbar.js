@@ -42,7 +42,7 @@ export default function Navbar(){
                 <div className="flex-1"></div>
                 <div className="flex-1"></div>
                 <div className="flex-1 right-7">
-                    <div className=" cursor-pointer float-right py-0 pb-0 pt-3 content-center justify-center bg-center opacity-75 duration-0 hover:duration-500 transition hover:opacity-100">
+                    <div className=" cursor-pointer float-right py-0 pb-0 pt-3 content-center justify-center bg-center opacity-75 duration-0 hover:duration-500 transition hover:opacity-100 hover:saturate-200">
                         <Link href="/">
                             <Image src="/images/discordlogo.png" alt="discord logo" width={64} height={36}></Image>
                         </Link>

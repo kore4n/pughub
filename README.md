@@ -18,6 +18,7 @@ Related links:
 - PugHub Owners and Creators - Cerby#3741 & Unity#2031
 - Front-end - Jason Kwan
 - Back-end - Kastaling#0001
+- Class emblems - NinjaSaus
 
 ## License
 MIT License - do whatever you want

@@ -7,6 +7,7 @@ import Footer from '../components/footer'
 import PageBody from '../components/page-body'
 import PageHeading from '../components/page-heading'
 import ClassQueue from '../components/class-queue'
+import ClassQueueHeading from '../components/class-queue-heading'
 
 export default function Home() {
   return (
@@ -30,17 +31,39 @@ export default function Home() {
               Roles
             </div>
           </div>
-          <div className='flex-1 max-h-20 my-4 ml-4 text-2xl'>
+          <div className='flex-1 max-h-20 my-4 ml-4 text-2xl bg-stone-800'>
             Captain
           </div>
           {/* Holds all class queue columns */}
-          <div className='flex'>
-            <ClassQueue />
-            <ClassQueue />
-            <ClassQueue />
-            <ClassQueue />
-            <ClassQueue />
-            <ClassQueue />
+          <div className='flex '>
+            <ClassQueue>
+              <ClassQueueHeading>
+                <div className='p-2 flex-1'>
+                  <Image src="/images/scoutemblem.png" alt="scout emblem" width={48} height={48}/ >
+                </div>
+                <div className='flex flex-col flex-1 mr-20 content-center'>
+                  <div className=''>
+                    Pocket Scout
+                  </div>
+                  <input className=' mb-5' type={"checkbox"}></input>
+                </div>
+              </ClassQueueHeading>
+            </ ClassQueue>
+            <ClassQueue>
+              Flank Scout
+            </ ClassQueue>
+            <ClassQueue>
+              Pocket Soldier
+            </ ClassQueue>
+            <ClassQueue>
+              Roaming Soldier
+            </ ClassQueue>
+            <ClassQueue>
+              Demoman
+            </ ClassQueue>
+            <ClassQueue>
+              Medic
+            </ ClassQueue>
           </div>
         </div>
         <Footer />
