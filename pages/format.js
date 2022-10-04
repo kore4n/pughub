@@ -6,6 +6,7 @@ import PageHeading from '../components/page-heading';
 import PageBody from '../components/page-body';
 import TF2Map from "../components/tf2-map";
 import Image from "next/image";
+import CustomBreak from "../components/custom-break";
 
 export default function Format(){
     return (
@@ -16,7 +17,7 @@ export default function Format(){
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
             </Head>
             <Navbar />
-            <PageOpening title = "FORMAT" subTitle="HOW GAMES ARE PLAYED" imageName="jorgen" />
+            <PageOpening title = "FORMAT" subTitle="how games are played"/>
             <PageBody>
                 <PageHeading 
                     title="DRAFT" 
@@ -78,8 +79,9 @@ export default function Format(){
                         />
                     </div>
                 </div>
-                <Footer />
+                <CustomBreak/>
             </PageBody>
+            <Footer />
         </div>
     )
 }

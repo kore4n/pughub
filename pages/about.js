@@ -4,6 +4,7 @@ import Footer from '../components/footer';
 import PageOpening from '../components/page-opening';
 import PageHeading from '../components/page-heading';
 import PageBody from '../components/page-body';
+import CustomBreak from '../components/custom-break';
 
 export default function About() {
   return (
@@ -14,7 +15,7 @@ export default function About() {
             <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         </Head>
         <Navbar/>
-        <PageOpening title = "ABOUT" subTitle="THE PAST, PRESENT, AND FUTURE OF THIS WEBSITE" imageName="omnipyro" /> 
+        <PageOpening title = "ABOUT" subTitle="history, gift, mystery"/> 
           <PageBody>
               <PageHeading 
                   title="THE BASICS" 
@@ -23,9 +24,9 @@ export default function About() {
                   PugHub is currently in alpha.
                   No elo. Why no elo? https://clips.twitch.tv/RealCrowdedInternCoolStoryBro No longer shall there need to be 20 in-house pugs spread across NA. We shall be united."
               />
-              <Footer/>
+              <CustomBreak/>
           </PageBody>
-        
+          <Footer/>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import FooterBorder from "./footer-border";
 
 export default function Footer(){
     return (
-    <div className="font-['Open Sans'] bg-main-background text-gray-400 p-10 text-center tracking-widest flex flex-col justify-center items-center itemscontent-evenly pt-28">
+    <div className="font-['Open Sans'] bg-main-background text-gray-400 px-10 pb-10 pt-0 text-center tracking-widest flex flex-col justify-center items-center itemscontent-evenly pt-28">
         <div className="py-2">
             Copyright © 2022 Pughub
         </div>
@@ -20,7 +20,7 @@ export default function Footer(){
             </div>
 
             <div className=" py-0 pl-2 flex-1 m-auto">
-            owned and co-founded by Cerby#3741 & Unity#2031
+                owned and co-founded by Cerby#3741 & Unity#2031
             </div>
         </div>
         <FooterBorder />

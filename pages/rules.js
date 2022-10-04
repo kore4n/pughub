@@ -4,6 +4,7 @@ import Navbar from "../components/navbar";
 import PageOpening from '../components/page-opening';
 import PageHeading from '../components/page-heading';
 import PageBody from '../components/page-body';
+import CustomBreak from "../components/custom-break";
 
 export default function Rules(){
     return (
@@ -14,15 +15,16 @@ export default function Rules(){
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
             </Head>
             <Navbar />
-            <PageOpening title = "RULES" subTitle="BIG BROTHER IS WATCHING YOU" imageName="jorgen" />
+            <PageOpening title = "RULES" subTitle="big brother is watching you"/>
             <PageBody>
                 <PageHeading 
                     title="DA RULES" 
                     content="Violations of any of the following rules may result in applicable restrictions. 
                     Admins are given discretion in enforcing these rules as they see fit for the benefit of the site and its community.">
                 </PageHeading>
-                <Footer />
+                <CustomBreak/>
             </PageBody>
+            <Footer />
         </div>
     )
 }

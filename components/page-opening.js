@@ -2,15 +2,13 @@
 
 export default function PageOpening(props) {
     return(
-        <div>
-            <div className={`text-4xl font-bold text-center text-white top-500 justify-self-center py-64 tracking-widest bg-center bg-${props.imageName}`}>
-            {/* <div className={`text-4xl font-bold text-center text-white top-500 justify-self-center py-64 tracking-widest bg-center bg-jorgen`}> */}
+        <header>
+            <h1 className={`text-5xl font-bold font-sans-serif bg-main-background text-center text-white top-500 justify-self-center pt-20 pb-16 bg-center`}>
                 {props.title}
-                {/* {props.imageName} */}
-                <div className="text-lg p-6 font-medium">
+                <div className=" text-base py-2 pb-4 font-medium">
                     {props.subTitle}    
                 </div>
-            </div>
-        </div>
+            </h1>
+        </header>
     )
 }
