@@ -8,8 +8,47 @@ import PageBody from '../components/page-body'
 import PageHeading from '../components/page-heading'
 import ClassQueue from '../components/class-queue'
 import ClassQueueHeading from '../components/class-queue-heading'
+import ClassIsQueued from '../components/class-is-queued'
 
-export default function Home() {
+import { useState } from 'react'
+import { useEffect } from 'react'
+import io from "Socket.IO-client"
+let socket;
+
+const Home = () => {
+  const [input, setInput] = useState(false)
+  const [playersQueued, setPlayersQueued] = useState(["Bunny", "Kitty", "Doggy"]);
+
+  useEffect(() => {socketInitializer()})
+
+  const socketInitializer = async () => {
+    await fetch('/api/socket');
+    socket = io()
+
+    socket.on('connect', () => {
+      console.log('connected mm')
+    })
+
+    socket.on('update-input', msg => {
+      console.log("Updating input")
+      setInput(msg)
+    })
+
+    socket.on('queue-input', msg => {
+      console.log(msg)
+      setPlayersQueued(msg)
+    })
+  }
+
+  const onChangeHandler = (e) => {
+    setInput(e.target.checked)
+    const newPlayersQueued = [...playersQueued, "new one"]
+    setPlayersQueued(newPlayersQueued)
+    
+    socket.emit('input-change', e.target.checked)
+    socket.emit('queue-change', newPlayersQueued)
+  }
+
   return (
     <div>
       <Head>
@@ -17,123 +56,84 @@ export default function Home() {
         <meta name="Homepage" content="Pughub home" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
-      <Navbar/>
       <PageBody>
-        <div className=' p-10 min-h-screen flex flex-col'>
+        <div className=' p-10 min-h-screen flex flex-col gap-10'>
           <div className=' flex-1 flex content-center max-h-10 divide-x divide-solid divide-white'>
             <div className='flex-1 text-center m-auto'>
               Captains
+              <div>
+                0/2
+              </div>
             </div>
             <div className='flex-1 text-center m-auto'>
               Players
+              <div>
+                0/12
+              </div>
             </div>
             <div className='flex-1 text-center m-auto'>
               Roles
+              <div>
+                0/6
+              </div>
             </div>
-          </div>
-          <div className='flex-1 max-h-20 my-4 ml-4 text-2xl bg-stone-800'>
-            Captain
           </div>
           {/* Holds all class queue columns */}
           <div className='flex '>
-            <ClassQueue>
-              <ClassQueueHeading>
-                <div className='p-2 flex-1'>
-                  <Image src="/images/scoutemblem.png" alt="scout emblem" width={48} height={48}/ >
-                </div>
-                <div className='flex flex-col flex-1 mr-20 content-center'>
-                  <div className=''>
-                    Pocket Scout
-                  </div>
-                  <input className=' mb-5' type={"checkbox"}></input>
-                </div>
-              </ClassQueueHeading>
+            <ClassQueue playersQueued={playersQueued}>
+              <ClassQueueHeading
+                image={"/images/scoutemblem.png"}
+                alt={"scout emblem"}
+                input={input}
+                title={"Pocket Scout"}
+                onChangeHandler={onChangeHandler}/>
             </ ClassQueue>
             <ClassQueue>
-              Flank Scout
+            <ClassQueueHeading
+                image={"/images/scoutemblem.png"}
+                alt={"scout emblem"}
+                input={input}
+                title={"Flank Scout"}
+                onChangeHandler={onChangeHandler}/>
             </ ClassQueue>
             <ClassQueue>
-              Pocket Soldier
+            <ClassQueueHeading
+                image={"/images/soldieremblem.png"}
+                alt={"soldier emblem"}
+                input={input}
+                title={"Pocket Soldier"}
+                onChangeHandler={onChangeHandler}/>
             </ ClassQueue>
             <ClassQueue>
-              Roaming Soldier
+            <ClassQueueHeading
+                image={"/images/soldieremblem.png"}
+                alt={"soldier emblem"}
+                input={input}
+                title={"Roaming Soldier"}
+                onChangeHandler={onChangeHandler}/>
             </ ClassQueue>
             <ClassQueue>
-              Demoman
+            <ClassQueueHeading
+                image={"/images/demomanemblem.png"}
+                alt={"demoman emblem"}
+                input={input}
+                title={"Demoman"}
+                onChangeHandler={onChangeHandler}/>
             </ ClassQueue>
             <ClassQueue>
-              Medic
+            <ClassQueueHeading
+                image={"/images/medemblem.png"}
+                alt={"medic emblem"}
+                input={input}
+                title={"Medic"}
+                onChangeHandler={onChangeHandler}/>
             </ ClassQueue>
           </div>
         </div>
         <Footer />
       </PageBody>
-
     </div>
-
-
-
-
-    // <div className={styles.container}>
-    //   <Head>
-    //     <title>Create Next App</title>
-    //     <meta name="description" content="Generated by create next app" />
-    //     <link rel="icon" href="/favicon.ico" />
-    //   </Head>
-
-    //   <main className={styles.main}>
-    //     <h1 className={styles.title}>
-    //       Welcome to Pughub!
-    //     </h1>
-
-    //     <p className={styles.description}>
-    //       Get started by editing{' '}
-    //       <code className={styles.code}>pages/index.js</code>
-    //     </p>
-
-    //     <div className={styles.grid}>
-    //       <a href="https://nextjs.org/docs" className={styles.card}>
-    //         <h2>Documentation &rarr;</h2>
-    //         <p>Find in-depth information about Next.js features and API.</p>
-    //       </a>
-
-    //       <a href="https://nextjs.org/learn" className={styles.card}>
-    //         <h2>Learn &rarr;</h2>
-    //         <p>Learn about Next.js in an interactive course with quizzes!</p>
-    //       </a>
-
-    //       <a
-    //         href="https://github.com/vercel/next.js/tree/canary/examples"
-    //         className={styles.card}
-    //       >
-    //         <h2>Examples &rarr;</h2>
-    //         <p>Discover and deploy boilerplate example Next.js projects.</p>
-    //       </a>
-
-    //       <a
-    //         href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-    //         className={styles.card}
-    //       >
-    //         <h2>Deploy &rarr;</h2>
-    //         <p>
-    //           Instantly deploy your Next.js site to a public URL with Vercel.
-    //         </p>
-    //       </a>
-    //     </div>
-    //   </main>
-
-    //   <footer className={styles.footer}>
-    //     <a
-    //       href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Built with Next.js. Powered by{' '}
-    //       <span className={styles.logo}>
-    //         <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-    //       </span>
-    //     </a>
-    //   </footer>
-    // </div>
   )
 }
+
+export default Home;

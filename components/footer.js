@@ -30,7 +30,7 @@ export default function Footer(){
             </div>
             <div className=" text-blue-500">
                 <Link href="https://github.com/kore4n">
-                    Jason Kwan
+                    Kore4n
                 </Link>
             </div>
         </div>

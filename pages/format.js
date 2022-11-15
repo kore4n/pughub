@@ -16,9 +16,8 @@ export default function Format(){
                 <meta name="description" content="Pughub format" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
             </Head>
-            <Navbar />
-            <PageOpening title = "FORMAT" subTitle="how games are played"/>
             <PageBody>
+                <PageOpening title = "FORMAT" subTitle="how games are played"/>
                 <PageHeading 
                     title="DRAFT" 
                     content="Two captains are selected to draft randomly with selection weight based on previous success.

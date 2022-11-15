@@ -14,9 +14,8 @@ export default function Rules(){
                 <meta name="description" content="Pughub rules" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
             </Head>
-            <Navbar />
-            <PageOpening title = "RULES" subTitle="big brother is watching you"/>
             <PageBody>
+                <PageOpening title = "RULES" subTitle="big brother is watching you"/>
                 <PageHeading 
                     title="DA RULES" 
                     content="Violations of any of the following rules may result in applicable restrictions. 
