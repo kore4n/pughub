@@ -9,6 +9,9 @@ import Image from "next/image";
 import CustomBreak from "../components/custom-break";
 
 export default function Format(){
+    const mapWidth = 300;
+    const mapHeight = 169;
+
     return (
         <div>
             <Head>
@@ -24,7 +27,7 @@ export default function Format(){
 
                     Player picks are then performed in the following order:">
                 </PageHeading>
-                <div>
+                <div className=" text-center">
                     A B B A A B B A A B
                 </div>
                 {/* Map picks */}
@@ -33,48 +36,68 @@ export default function Format(){
                         The whitelist and round timer ruleset will be identical to the latest RGL ruleset.
                     </div>
                     <div className=" text-center mt-10 mb-20">
-                        The following maps will be put into rotation
+                        The following maps will be put into rotation.
                     </div>
                     <div className=" grid grid-cols-3 mx-80 mb-20">
                         <TF2Map
                             title={"PROCESS"}
-                            map={<Image src="/images/maps/process.png" alt="process" width={300} height={169}/>}
+                            mapSource="/images/maps/process.png"
+                            mapAlt="process"
                         />
                         <TF2Map
                             title={"GULLYWASH"}
-                            map={<Image src="/images/maps/gullywash.png" alt="gullywash" width={300} height={169}/>}
+                            mapSource="/images/maps/gullywash.png"
+                            mapAlt="gullywash"
                         />
                         <TF2Map
                             title={"SUNSHINE"}
-                            map={<Image src="/images/maps/sunshine.png" alt="sunshine" width={300} height={169}/>}
+                            mapSource="/images/maps/sunshine.png"
+                            mapAlt="sunshine"
                         />
                         <TF2Map
                             title={"METALWORKS"}
-                            map={<Image src="/images/maps/metalworks.png" alt="metalworks" width={300} height={169}/>}
+                            mapSource="/images/maps/metalworks.png"
+                            mapAlt="metalworks"
                         />
                         <TF2Map
                             title={"RECKONER"}
-                            map={<Image src="/images/maps/reckoner.jpg" alt="reckoner" width={300} height={169}/>}
+                            mapSource="/images/maps/reckoner.jpg"
+                            mapAlt="reckoner"
                         />
                         <TF2Map
                             title={"SNAKEWATER"}
-                            map={<Image src="/images/maps/snakewater.png" alt="snakewater" width={300} height={169}/>}
+                            mapSource="/images/maps/snakewater.png"
+                            mapAlt="snakewater"
                         />
                         <TF2Map
                             title={"GRANARY"}
-                            map={<Image src="/images/maps/granary.png" alt="granary" width={300} height={169}/>}
+                            mapSource="/images/maps/granary.png"
+                            mapAlt="granary"
                         />
                         <TF2Map
                             title={"BAGEL"}
-                            map={<Image src="/images/maps/bagel.jpg" alt="bagel" width={300} height={169}/>}
+                            mapSource="/images/maps/bagel.jpg"
+                            mapAlt="bagel"
                         />
                         <TF2Map
                             title={"PRODUCT"}
-                            map={<Image src="/images/maps/product.jpg" alt="product" width={300} height={169}/>}
+                            mapSource="/images/maps/product.jpg"
+                            mapAlt="product"
                         />
                         <TF2Map
                             title={"CLEARCUT"}
-                            map={<Image src="/images/maps/clearcut.png" alt="clearcut" width={300} height={169}/>}
+                            mapSource="/images/maps/clearcut.png"
+                            mapAlt="clearcut"
+                        />
+                        <TF2Map
+                            title={"SULTRY"}
+                            mapSource="/images/maps/sultry.jpg"
+                            mapAlt="sultry"
+                        />
+                        <TF2Map
+                            title={"MANNBASE"}
+                            mapSource="/images/maps/mannbase.jpeg"
+                            mapAlt="mannbase"
                         />
                     </div>
                 </div>

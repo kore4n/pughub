@@ -58,7 +58,7 @@ const Home = () => {
       </Head>
       <PageBody>
         <div className=' p-10 min-h-screen flex flex-col gap-10'>
-          <div className=' flex-1 flex content-center max-h-10 divide-x divide-solid divide-white'>
+          <div className=' flex-1 flex content-center max-h-10 divide-x divide-solid divide- divide-gray-600'>
             <div className='flex-1 text-center m-auto'>
               Captains
               <div>

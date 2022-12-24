@@ -15,7 +15,7 @@ export default function About() {
             <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         </Head>
         <PageBody>
-          <PageOpening title = "ABOUT" subTitle="history, gift, mystery"/> 
+          <PageOpening title = "ABOUT" subTitle="who r we"/> 
             <PageHeading 
                 title="THE BASICS" 
                 content="PugHub was conceived in 2020 as a result of the collapse of PugChamp along with the many small in-house groups that were made.

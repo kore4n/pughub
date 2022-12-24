@@ -12,6 +12,7 @@ Related links:
 - React
 - Next.js
 - Tailwind CSS
+- SocketIO
 
 ## Credits
 - PugHub.tf Author - Kastaling#0001

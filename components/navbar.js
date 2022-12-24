@@ -11,6 +11,7 @@ export default function Navbar(){
             </span>
             <nav>
                 <ul className=" flex gap-10">
+                    <LinkTextLocal link="/" linkText="home" />
                     <LinkTextLocal link="about" linkText="about" />
                     <LinkTextLocal link="rules" linkText="rules" />
                     <LinkTextLocal link="format" linkText="format" />
